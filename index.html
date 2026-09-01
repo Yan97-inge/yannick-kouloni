@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yannick Kouloni | Parcours académique et projet de thèse CIFRE</title>
+
+<style>
+
+:root{
+    --bg:#ffffff;
+    --text:#1d1d1f;
+    --muted:#6e6e73;
+    --accent:#0066cc;
+    --border:#e5e5e7;
+    --card:#f5f5f7;
+}
+
+[data-theme="dark"]{
+    --bg:#121212;
+    --text:#f5f5f7;
+    --muted:#a1a1aa;
+    --accent:#2997ff;
+    --border:#333333;
+    --card:#1c1c1e;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    transition:0.3s;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:15px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+}
+
+button{
+    padding:10px 16px;
+    border-radius:8px;
+    border:1px solid var(--border);
+    background:var(--card);
+    cursor:pointer;
+    color:var(--text);
+}
+
+button.active{
+    background:var(--accent);
+    color:white;
+}
+
+header{
+    margin-bottom:50px;
+}
+
+h1{
+    font-size:3rem;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    font-size:1.2rem;
+    color:var(--muted);
+}
+
+.links{
+    margin-top:20px;
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.links a{
+    text-decoration:none;
+    color:var(--accent);
+    font-weight:600;
+}
+
+.links a:hover{
+    text-decoration:underline;
+}
+
+section{
+    margin-bottom:50px;
+}
+
+h2{
+    margin-bottom:20px;
+    border-bottom:1px solid var(--border);
+    padding-bottom:10px;
+}
+
+.card{
+    background:var(--card);
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.card-title{
+    font-size:1.2rem;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.card-subtitle{
+    color:var(--muted);
+    margin-bottom:10px;
+}
+
+ul{
+    padding-left:22px;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+
+.hero{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.profile-picture{
+    width:260px;
+    height:320px;
+    object-fit:cover;
+    border-radius:20px;
+    border:4px solid var(--accent);
+    box-shadow:0 15px 35px rgba(0,0,0,0.20);
+    display:block;
+    margin:25px auto;
+}
+
+.hero-content{
+    flex:1;
+}
+
+.btn-cv{
+    background:var(--accent);
+    color:white !important;
+    padding:10px 18px;
+    border-radius:8px;
+    text-decoration:none !important;
+}
+
+.links{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.links a{
+    text-decoration:none;
+    color:white;
+    background:var(--accent);
+    padding:10px 18px;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.links a:hover{
+    transform:translateY(-2px);
+    opacity:0.9;
+}
+.links a:hover{
+    transform:translateY(-2px);
+    opacity:0.9;
+}
+footer{
+    border-top:1px solid var(--border);
+    padding-top:20px;
+    text-align:center;
+    color:var(--muted);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="topbar">
+
+<div class="buttons">
+<button id="btn-fr" class="active" onclick="switchLanguage('fr')">
+Français
+</button>
+
+<button id="btn-en" onclick="switchLanguage('en')">
+English
+</button>
+</div>
+
+<button onclick="toggleTheme()">
+🌙 / ☀️
+</button>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- FRANÇAIS -->
+<!-- ====================================================== -->
+
+<div id="section-fr">
+
+<header>
+
+<div style="text-align:center;">
+
+    <h1>Yannick Kouloni</h1>
+
+    <img
+        src="images/photo.jpg"
+        alt="Photo de Yannick Kouloni"
+        class="profile-picture">
+
+    <p class="subtitle">
+        Ingénieur Mathématicien spécialisé en Ingénierie Numérique
+    </p>
+
+    <p class="subtitle">    <p class="subtitle">
+        ONERA • INRIA • Sorbonne Université • TotalEnergies
+    </p>
+
+    <p class="subtitle">
+        Applied Mathematics • Scientific Computing • Artificial Intelligence • Scientific Machine Learning
+    </p>
+
+    <p class="subtitle">
+        Candidat à une Thèse de Doctorat CIFRE
+    </p>
+
+    <div class="links">
+
+        <a
+            href="https://www.linkedin.com/in/yannick-kouloni"
+            target="_blank"
+            rel="noopener noreferrer">
+            🔗 LinkedIn
+        </a>
+
+        <a
+            href="https://github.com/Yan97-inge"
+            target="_blank"
+            rel="noopener noreferrer">
+            💻 GitHub
+        </a>
+
+        <a
+            href="cv/Yannick_Kouloni_CV.pdf"
+            download
+            class="btn-cv">
+            📄 Télécharger le CV
+        </a>
+
+    </div>
+
+</div>
+
+</header>
+
+<section>
+
+<h2>Démarche et Vocation de Recherche</h2>
+
+<p>
+Ingénieur mathématicien passionné par l'innovation technologique, mon profil est au carrefour des mathématiques,
+de la physique, de la mécanique numérique, de la modélisation mathématique, du calcul scientifique traditionnel à l'industrie 4.0 et les jumeaux numériques, de l'intelligence artificielle, de la Data Science, de l'ingénierie des données, de l'informatique de pointe et de nombreux autres Sciences appliquées.
+</p>
+
+<p>
+Fort d'un parcours multidisciplinaire de haut niveau, de près de 10 années d'études supérieures,
+j'ambitionne de contribuer à des projets de recherche
+alliant excellence académique et impact industriel,
+notamment dans le cadre d'une thèse CIFRE.
+</p>
+
+</section>
+
+<section>
+
+<h2>Domaines d'Expertise Scientifique et Technique</h2>
+
+<ul>
+
+<li>
+Mathématiques appliquées et calcul scientifique.
+</li>
+
+<li>
+Analyse numérique et résolution des équations aux dérivées partielles.
+</li>
+
+<li>
+Scientific Machine Learning (SciML).
+</li>
+
+<li>
+Quantification des incertitudes et analyse de sensibilité.
+</li>
+
+<li>
+High Performance Computing (MPI,OpenMP, CUDA, C++, Fortran).
+</li>
+
+<li>
+Optimisation avancée et commande optimale.
+</li>
+
+<li>
+Computational Fluid Dynamics (CFD).
+</li>
+
+<li>
+Digital Twins et réduction de modèles.
+</li>
+
+<li>
+Machine Learning et Deep Learning.
+</li>
+
+<li>
+Data Engineering, Big Data et ModelOps.
+</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Cursus Académique</h2>
+
+<div class="card">
+
+<div class="card-title">
+Baccalauréat C, Mathématiques et Sciences Physiques
+</div>
+Togo (Lomé),
+Diplôme d'excellence ultra-sélectif posant les bases de ma rigueur scientifique.
+
+</div>
+
+<div class="card">
+
+<div class="card-title">
+Licence fondamentale en Mathématiques et Physique
+</div>
+Université de Lomé,
+Spécialité Mathématiques, avec des connaissances générales en Physique, Mécanique et Informatique.
+
+</div>
+
+<div class="card">
+
+<div class="card-title">
+Master Mathématiques et Applications
+</div>
+Université Côte d'Azur,
+Parcours Ingénierie Mathématique (IM) ,
+Option Analyse Numérique- Calcul Scientifique en M1.
+</div>
+
+<div class="card">
+
+<div class="card-title">
+Spécialité M2 Ingénierie Numérique (INUM) ; Analyse Numérique, Mathématiques Appliquées et Informatique
+
+
+</div>
+École d'ingénieurs Polytechnique de l'Université Côte d'Azur (Polytech Nice-Sophia),
+
+Département Mathématiques Appliquées et Modélisation.
+</div>
+
+<div class="card">
+
+<div class="card-title">
+Certification Professionnelle D'expert en Infrastructures de Données Massives
+</div>
+
+Approfondissement des sujets Data Engineering & Big Data,
+Cloud Computing, DataOps, DevOps,
+Gouvernance Data et Protection des données et infrastructures distribuées.
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Expériences de Recherches Académiques et Industrielles</h2>
+
+<div class="card">
+
+<div class="card-title">
+SUMMIT - Sorbonne Université
+</div>
+
+<div class="card-subtitle">
+Projet National OBEPINE
+</div>
+
+Travaux de recherche menés dans le cadre du projet
+OBEPINE (Observatoire Épidémiologique dans les Eaux Usées).
+
+Participation à des travaux de réduction de modèles,
+de simulation numérique et de modélisation mathématique
+appliquée à des problématiques de prédiction épidémiologiques.
+
+Sous la direction scientifique de Yvon Maday, mathématicien de premier plan et de renommée internationale en Mathématiques Appliquées et
+Calcul Scientifique (Professeur à Sorbonne Université au sein du laboratoire Jacques-Louis Lions).
+
+</div>
+
+<div class="card">
+
+<div class="card-title">
+ONERA - The French Aerospace Lab
+</div>
+
+<div class="card-subtitle">
+Département Multi-Physiques pour l'Énergétique
+</div>
+
+Contribution à l'amélioration des méthodes de non-régression pour les outils de simulation numérique du givrage
+aéronautique
+Thématiques : Méthodes numériques et HPC (High Performance Computing), Physique du givrage
+Méthodes à mettre en œuvre : Recherche appliquée et participation à une réalisation.
+</div>
+
+<div class="card">
+
+<div class="card-title">
+INRIA
+</div>
+
+<div class="card-subtitle">
+Méthode des Éléments Virtuels pour la modélisation des milieux urbains
+</div>
+
+Travaux consacrés à l'étude et à l'application
+des méthodes numériques avancées,
+notamment la méthode des Éléments Virtuels
+pour la modélisation de géométries complexes, afin de simuler numériquement la dynamique des fluides en milieu
+urbain complexe.
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Expérience en entreprise</h2>
+
+<div class="card">
+
+<div class="card-title">
+TotalEnergies
+</div>
+
+Actuellement en poste en tant que Data Scientist chez TotalEnergies (Global Information Technology Services)
+à Paris (La Défense), j'évolue à la frontière de la sécurité financière, des mathématiques appliquées et de l'IA. Mes
+travaux actuels portent une attention très marquée sur les mathématiques et statistiques avancées pour la détection
+de la fraude à la carte bancaire en temps réel, un enjeu de performance et de protection hautement stratégique pour
+l'ensemble de la compagnie.
+Cette expérience en entreprise renforce ma conviction qu'une recherche fructueuse s'appuie sur une écoute
+attentive des besoins du terrain. Aspirant à devenir un ingénieur-chercheur de premier plan, je souhaite humblement
+mettre ce double bagage (recherche et expérience en entreprise) au service d'un projet doctoral ambitieux, avec
+la ferme volonté d'apprendre au contact d'une équipe et de contribuer au succès de ses travaux. 
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Projet de Doctorat CIFRE</h2>
+
+<p>
+
+
+Le projet doctoral visé consiste à développer
+des approches innovantes au croisement des mathématiques,
+du calcul scientifique et de l'intelligence artificielle.
+</p>
+
+<br>
+
+<p>
+Les thématiques d'intérêt comprennent notamment :
+</p>
+
+<ul>
+<li>Scientific Machine Learning.</li>
+<li>Physics-Informed Neural Networks.</li>
+<li>Jumeaux Numériques.</li>
+<li>Calcul Haute Performance.</li>
+<li>Réduction de modèles.</li>
+<li>Modélisation multi-physique.</li>
+<li>Quantification des incertitudes.</li>
+<li>IA appliquée à l'industrie.</li>
+</ul>
+
+</section>
+
+<section>
+
+<section>
+
+<h2>Technologies et Outils</h2>
+
+<div class="card">
+
+<strong>Programmation :</strong><br>
+Python · SQL · Scala · Java · C++ · Fortran · Bash . Julia
+
+<br><br>
+
+<strong>Machine Learning & IA :</strong><br>
+Scikit-Learn · XGBoost · TensorFlow · PyTorch
+
+<br><br>
+
+<strong>Big Data :</strong><br>
+Spark · PySpark · Databricks · Hadoop · Delta Lake
+
+<br><br>
+
+<strong>Cloud & DevOps :</strong><br>
+Azure · Docker · Kubernetes · Git · CI/CD
+
+<br><br>
+
+<strong>Calcul Scientifique :</strong><br>
+MPI · Abaqus · Ansys Twin Builder · CFD · Digital Twin . Matlab . Scilab . GMSH
+
+</div>
+
+</section>
+
+</section>
+
+</div>
+
+<!-- ====================================================== -->
+<!-- ENGLISH -->
+<!-- ====================================================== -->
+
+<div id="section-en" style="display:none">
+
+<header>
+
+<h1>Yannick Kouloni</h1>
+
+<p class="subtitle">
+Academic Background and CIFRE PhD Project
+</p>
+
+</header>
+
+<section>
+
+<h2>Research Vision</h2>
+
+<p>
+Mathematical Engineer specialized in Applied Mathematics,
+Scientific Computing, Artificial Intelligence,
+Data Science and Data Engineering.
+</p>
+
+<p>
+My objective is to contribute to ambitious research projects
+at the intersection of advanced mathematics,
+scientific computing and industrial innovation.
+</p>
+
+</section>
+
+<section>
+
+<h2>Areas of Expertise</h2>
+
+<ul>
+
+<li>Applied Mathematics</li>
+<li>Scientific Computing</li>
+<li>Numerical Analysis</li>
+<li>Scientific Machine Learning</li>
+<li>Uncertainty Quantification</li>
+<li>Artificial Intelligence</li>
+<li>High Performance Computing</li>
+<li>Optimization</li>
+<li>Data Engineering</li>
+<li>Digital Twins</li>
+
+</ul>
+
+</section>
+
+<section>
+
+<h2>Research Experience</h2>
+
+<div class="card">
+<b>Sorbonne University - SUMMIT</b><br><br>
+OBEPINE National Project, model reduction
+and numerical simulations.
+</div>
+
+<div class="card">
+<b>ONERA</b><br><br>
+Research activities in aerospace icing
+numerical modelling and multiphysics simulation.
+</div>
+
+<div class="card">
+<b>INRIA</b><br><br>
+Virtual Element Method for advanced numerical modelling.
+</div>
+
+</section>
+
+<section>
+
+<h2>Industrial Experience</h2>
+
+<div class="card">
+
+<b>TotalEnergies</b><br><br>
+
+Machine Learning, Data Science,
+Data Engineering, MLOps,
+large-scale data processing and industrial AI.
+
+</div>
+
+</section>
+
+<section>
+
+<h2>CIFRE PhD Objective</h2>
+
+<p>
+Develop innovative methodologies combining:
+</p>
+
+<ul>
+
+<li>Scientific Machine Learning</li>
+<li>Physics-Informed AI</li>
+<li>Digital Twins</li>
+<li>HPC</li>
+<li>Model Reduction</li>
+<li>Industrial Applications</li>
+
+</ul>
+
+</section>
+
+</div>
+
+<footer>
+
+<p>
+© 2026 Yannick Kouloni · Mathematical Engineer · Data Scientist · CIFRE PhD Candidate
+</p>
+
+<br>
+
+<p>
+Applied Mathematics · Scientific Computing · Artificial Intelligence · Data Science
+</p>
+
+<br>
+
+<p>
+
+<a
+href="https://www.linkedin.com/in/yannick-kouloni"
+target="_blank"
+rel="noopener noreferrer">
+LinkedIn
+</a>
+
+ |
+
+<a
+href="https://github.com/Yan97-inge"
+target="_blank"
+rel="noopener noreferrer">
+GitHub
+</a>
+
+ |
+
+<a
+href="cv/Yannick_Kouloni_CV.pdf"
+downloadooter>
+</div>
+
+<script>
+
+function switchLanguage(lang){
+
+    const fr=document.getElementById("section-fr");
+    const en=document.getElementById("section-en");
+
+    const btnFr=document.getElementById("btn-fr");
+    const btnEn=document.getElementById("btn-en");
+
+    if(lang==="fr"){
+        fr.style.display="block";
+        en.style.display="none";
+        btnFr.classList.add("active");
+        btnEn.classList.remove("active");
+    }else{
+        fr.style.display="none";
+        en.style.display="block";
+        btnEn.classList.add("active");
+        btnFr.classList.remove("active");
+    }
+}
+
+function toggleTheme(){
+
+    const body=document.body;
+
+    if(body.getAttribute("data-theme")==="dark"){
+        body.removeAttribute("data-theme");
+    }else{
+        body.setAttribute("data-theme","dark");
+    }
+}
+
+</script>
+
+</body>
+</html>
